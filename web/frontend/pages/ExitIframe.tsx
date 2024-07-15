@@ -11,6 +11,7 @@ export default function ExitIframe() {
     if (!!app && !!search) {
       const params = new URLSearchParams(search)
       const redirectUri = params.get('redirectUri')
+      // const directUri = params.get('directUri')
       const url = new URL(decodeURIComponent(redirectUri))
 
       if (url.hostname === location.hostname) {
