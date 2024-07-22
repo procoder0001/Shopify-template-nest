@@ -5,7 +5,7 @@ import translations from '@shopify/polaris/locales/en.json'
 import '@shopify/polaris/build/esm/styles.css'
 
 function AppBridgeLink({ url, children, external, ...rest }: any) {
-  const navigate = useNavigate()
+  const navigate = useNavigate()  
   const handleClick = useCallback(() => {
     navigate(url)
   }, [url])
@@ -18,11 +18,11 @@ function AppBridgeLink({ url, children, external, ...rest }: any) {
         {children}
       </a>
     )
-  }
+    }
 
   return (
     <a onClick={handleClick} {...rest}>
-      {children}
+      {children}  
     </a>
   )
 }

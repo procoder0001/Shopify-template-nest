@@ -18,14 +18,14 @@ type EmptyToastProps = {
 export function ProductsCard() {
   const emptyToastProps: EmptyToastProps = { content: null }
   const [isLoading, setIsLoading] = useState(true)
-  const [toastProps, setToastProps] = useState<EmptyToastProps>(emptyToastProps)
-  const fetch = useAuthenticatedFetch()
+    const [toastProps, setToastProps] = useState<EmptyToastProps>(emptyToastProps)
+    const fetch = useAuthenticatedFetch()
 
   const {
     data,
     refetch: refetchProductCount,
     isLoading: isLoadingCount,
-    isRefetching: isRefetchingCount,
+    isRefetching: isRefetchingCount,  
   } = useAppQuery({
     url: '/api/products/count',
     reactQueryOptions: {
